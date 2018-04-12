@@ -8,4 +8,4 @@ WORKDIR /home/scratchuser
 COPY --from=build-env /etc/ssl /etc/ssl
 COPY --from=build-env /go/src/github.com/mikeraimondi/wordminder/app .
 USER 10001
-ENTRYPOINT ["./app"]
+ENTRYPOINT ["/home/scratchuser/app"]
